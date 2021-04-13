@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class CookieComponent implements OnInit {
 
   constructor() { }
-
+  showFiller = false;
   
   ngOnInit(): void {
+    
   }
 
 }
