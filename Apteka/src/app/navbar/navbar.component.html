@@ -1,17 +1,41 @@
-<mat-toolbar fxLayout="row" color="primary">
-  <button mat-icon-button id='menubutton' >
-    <mat-icon>menu</mat-icon>
-  </button>
-  <a href="">
-    <img src="assets\mypharmacy.png" height="40px">
-  </a>
-  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-<app-searchbar ></app-searchbar>
-<button mat-icon-button id='loginbutton' >
-  <mat-icon aria-hidden="false" aria-label="Login icon">supervisor_account</mat-icon>
-</button>
-<button mat-icon-button id='cartbutton' >
-  <mat-icon aria-hidden="false" aria-label="Shopping cart icon">shopping_cart</mat-icon>
-</button>
-  </div>
-</mat-toolbar>
+
+
+<mat-sidenav-container color="primary">
+  <mat-sidenav #sidenav [fixedInViewport]="true">
+    <mat-nav-list>
+      <a mat-list-item [routerLink]=""> Test Test  </a>
+      <a mat-list-item [routerLink]=""> Test </a>
+      <a mat-list-item [routerLink]=""> Test  Test </a>
+      <a mat-list-item [routerLink]=""> Test </a>
+      <a mat-list-item [routerLink]=""> Test </a>
+      <a mat-list-item [routerLink]=""> Test </a>
+      <a mat-list-item [routerLink]=""> Test </a>
+      <a mat-list-item [routerLink]=""> Test </a>
+      <a mat-list-item [routerLink]=""> Test </a>
+      <a mat-list-item [routerLink]=""> Test </a>
+      <app-searchbar></app-searchbar>
+    </mat-nav-list>
+    
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar fxLayout="row" color="primary">
+      <button mat-icon-button id='menubutton' (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a href="">
+        <img src="assets\mypharmacy.png" height="40px">
+      </a>
+      <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <app-searchbar ></app-searchbar>
+    <button mat-icon-button id='loginbutton'(click)="openModal()">
+      <mat-icon aria-hidden="false" aria-label="Login icon">supervisor_account</mat-icon>
+    </button>
+    <button mat-icon-button id='cartbutton' >
+      <mat-icon aria-hidden="false" aria-label="Shopping cart icon">shopping_cart</mat-icon>
+    </button>
+      </div>
+    </mat-toolbar>
+    <ng-content>
+    </ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

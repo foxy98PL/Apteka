@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from '../menu-item';
+import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
+import { LoginModalComponent } from '../login-modal/login-modal.component';
+
 
 
 
@@ -8,21 +10,22 @@ import { MenuItem } from '../menu-item';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
+
+  
+
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-  showFiller = false;
+  modalRef: MDBModalRef;
 
-  menuItems: MenuItem[] = [
-    {
-      label: 'Sign Up',
-      icon: 'login',
-      showOnMobile: true,
-      showOnTablet: true,
-      showOnDesktop: true
-    }
-  ];
+  constructor(private modalService: MDBModalService) {}
+
+
+  openModal() {
+    this.modalRef = this.modalService.show(LoginModalComponent)
+  }
+  showFiller = false;
   ngOnInit(): void {
+
   }
 
 }

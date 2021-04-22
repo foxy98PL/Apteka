@@ -52,7 +52,16 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
+
+import { LoginModalComponent } from './login-modal/login-modal.component';
+
 import { SearchbarComponent } from './searchbar/searchbar.component';
+
+import { LayoutModule } from '@angular/cdk/layout';
+
+
+
+
 
 
 
@@ -61,7 +70,10 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     AppComponent,
     NavbarComponent,
     CookieComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    LoginModalComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -112,9 +124,14 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     PortalModule,
     ScrollingModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    LayoutModule,
+    
+    
+
   ],
   providers: [],
+  entryComponents: [ LoginModalComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

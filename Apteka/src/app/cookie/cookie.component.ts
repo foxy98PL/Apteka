@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalDirective } from 'angular-bootstrap-md';
+
 
 @Component({
   selector: 'app-cookie',
@@ -9,9 +11,11 @@ export class CookieComponent implements OnInit {
 
   constructor() { }
   showFiller = false;
-  
-  ngOnInit(): void {
-    
-  }
 
+  ngOnInit(){
+    setTimeout(() => { 
+    document.getElementById('test')?.click();
+  }, 100);
+  }
 }
+
