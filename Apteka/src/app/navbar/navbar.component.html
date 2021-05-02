@@ -13,9 +13,16 @@
       <a mat-list-item [routerLink]=""> Test </a>
       <a mat-list-item [routerLink]=""> Test </a>
       <a mat-list-item [routerLink]=""> Test </a>
-      <app-searchbar></app-searchbar>
+      <app-searchbar *ngIf="displayDevice"></app-searchbar>
+      <div *ngIf="displayDevice">
+        <button mat-icon-button id='loginbutton'(click)="openModal()">
+          <mat-icon aria-hidden="false" aria-label="Login icon">supervisor_account</mat-icon>
+        </button>
+        <button mat-icon-button id='cartbutton' >
+          <mat-icon aria-hidden="false" aria-label="Shopping cart icon">shopping_cart</mat-icon>
+        </button>  
+      </div>
     </mat-nav-list>
-    
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar fxLayout="row" color="primary">
@@ -26,11 +33,11 @@
         <img src="assets\mypharmacy.png" height="40px">
       </a>
       <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-    <app-searchbar ></app-searchbar>
-    <button mat-icon-button id='loginbutton'(click)="openModal()">
+    <app-searchbar *ngIf="!displayDevice" ></app-searchbar>
+    <button mat-icon-button id='loginbutton'(click)="openModal()" *ngIf="!displayDevice">
       <mat-icon aria-hidden="false" aria-label="Login icon">supervisor_account</mat-icon>
     </button>
-    <button mat-icon-button id='cartbutton' >
+    <button mat-icon-button id='cartbutton' *ngIf="!displayDevice">
       <mat-icon aria-hidden="false" aria-label="Shopping cart icon">shopping_cart</mat-icon>
     </button>
       </div>

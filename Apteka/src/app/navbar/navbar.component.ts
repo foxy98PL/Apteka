@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
+import { DeviceDetectorService ,DeviceInfo } from 'ngx-device-detector';
 import { LoginModalComponent } from '../login-modal/login-modal.component';
 
 
@@ -16,16 +17,21 @@ import { LoginModalComponent } from '../login-modal/login-modal.component';
 export class NavbarComponent implements OnInit {
 
   modalRef: MDBModalRef;
-
-  constructor(private modalService: MDBModalService) {}
-
-
+  displayDevice:boolean
+  deviceInfo:DeviceInfo;
+  device:string
+  constructor(private modalService: MDBModalService,private deviceDetector:DeviceDetectorService) {}
   openModal() {
     this.modalRef = this.modalService.show(LoginModalComponent)
   }
   showFiller = false;
   ngOnInit(): void {
-
+    this.deviceInfo=this.deviceDetector.getDeviceInfo()
+    this.device=this.deviceInfo.deviceType
+    if(this.device.match("mobile")){
+      this.displayDevice=true
+    }
+    console.log(window.innerWidth)
   }
 
 }
