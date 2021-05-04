@@ -58,6 +58,7 @@ import { LoginModalComponent } from './login-modal/login-modal.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 
 import { LayoutModule } from '@angular/cdk/layout';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -68,6 +69,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     CookieComponent,
     SearchbarComponent,
     LoginModalComponent,
+    FooterComponent,
 
 
   ],
