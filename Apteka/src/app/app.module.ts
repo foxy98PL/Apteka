@@ -60,6 +60,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 
 import { LayoutModule } from '@angular/cdk/layout';
 import { FooterComponent } from './footer/footer.component';
+import { FrontPageCarosuelComponent } from './front-page-carosuel/front-page-carosuel.component';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 
 
@@ -71,6 +73,7 @@ import { FooterComponent } from './footer/footer.component';
     SearchbarComponent,
     LoginModalComponent,
     FooterComponent,
+    FrontPageCarosuelComponent,
 
 
   ],
@@ -126,7 +129,7 @@ import { FooterComponent } from './footer/footer.component';
     FlexLayoutModule,
     LayoutModule,
     HttpClientModule,
-    
+    MatCarouselModule.forRoot()
     
 
   ],
