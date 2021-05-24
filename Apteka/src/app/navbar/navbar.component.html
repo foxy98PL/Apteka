@@ -1,16 +1,14 @@
 <mat-sidenav-container color="primary">
   <mat-sidenav #sidenav [fixedInViewport]="true">
     <mat-nav-list>
-      <a mat-list-item [routerLink]=""> Test Test  </a>
-      <a mat-list-item [routerLink]=""> Test </a>
-      <a mat-list-item [routerLink]=""> Test  Test </a>
-      <a mat-list-item [routerLink]=""> Test </a>
-      <a mat-list-item [routerLink]=""> Test </a>
-      <a mat-list-item [routerLink]=""> Test </a>
-      <a mat-list-item [routerLink]=""> Test </a>
-      <a mat-list-item [routerLink]=""> Test </a>
-      <a mat-list-item [routerLink]=""> Test </a>
-      <a mat-list-item [routerLink]=""> Test </a>
+      <a mat-list-item [routerLink]=""> Zdrowie </a>
+      <a mat-list-item [routerLink]=""> Ciąża i macierzyństwo </a>
+      <a mat-list-item [routerLink]=""> Dziecko </a>
+      <a mat-list-item [routerLink]=""> Kosmetyki </a>
+      <a mat-list-item [routerLink]=""> Higena </a>
+      <a mat-list-item [routerLink]=""> Zdrowy tryb życia </a>
+      <a mat-list-item [routerLink]=""> Dla niego </a>
+      <a mat-list-item [routerLink]=""> Sprzęt i akcesoria medyczne </a>
       <app-searchbar *ngIf="displayDevice"></app-searchbar>
       <div *ngIf="displayDevice">
         <button mat-icon-button id='loginbutton'(click)="openModal()">

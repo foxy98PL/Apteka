@@ -65,6 +65,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,6 +75,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     LoginModalComponent,
     FooterComponent,
     FrontPageCarosuelComponent,
+  
 
 
   ],
