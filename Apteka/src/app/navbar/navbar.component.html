@@ -1,22 +1,40 @@
 <mat-sidenav-container color="primary">
   <mat-sidenav #sidenav [fixedInViewport]="true">
+    <div class="color-block primary-color-dark z-depth-2">
+      <li>
+        <div class="logo-wrapper waves-dark">
+          <a href="#"><img src="/assets/myPharmacyLogo.svg" class="img-fluid flex-center" id="logoColor"
+              width="360px"></a>
+        </div>
+      </li>
+    </div>
+    <br>
     <mat-nav-list>
-      <a mat-list-item [routerLink]=""><i class="fas fa-camera fa-xs"></i> Zdrowie </a>
-      <a mat-list-item [routerLink]=""> Ciąża i macierzyństwo </a>
-      <a mat-list-item [routerLink]=""> Dziecko </a>
-      <a mat-list-item [routerLink]=""> Kosmetyki </a>
-      <a mat-list-item [routerLink]=""> Higena </a>
-      <a mat-list-item [routerLink]=""> Zdrowy tryb życia </a>
-      <a mat-list-item [routerLink]=""> Dla niego </a>
-      <a mat-list-item [routerLink]=""> Sprzęt i akcesoria medyczne </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-pills" id="icon"></i> Lekarstwa </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-briefcase-medical" id="icon"></i> Zdrowie </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-baby-carriage" id="icon"></i> Ciąża i macierzyństwo </a>
+      <a mat-list-item [routerLink]=""> <i class="fas fa-baby" id="icon"></i>Dziecko </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-prescription-bottle" id="icon"></i> Kosmetyki </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-scroll" id="icon"></i> Higena </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-briefcase-medical" id="icon"></i> Zdrowy tryb życia </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-user" id="icon"></i> Dla niego </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-file-medical-alt" id="icon"></i> Sprzęt i akcesoria medyczne
+      </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-biohazard" id="icon"></i> Covid-19 </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-glasses" id="icon"></i> Optyk </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-phone-alt" id="icon"></i> Kontakt </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-city" id="icon"></i> O nas</a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-shuttle-van" id="icon"></i> Dostawy </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-people-carry" id="icon"></i> Kariera </a>
+      <a mat-list-item [routerLink]=""><i class="fas fa-tablet-alt" id="icon"></i> Aplikacja </a>
       <app-searchbar *ngIf="displayDevice"></app-searchbar>
       <div *ngIf="displayDevice">
-        <button mat-icon-button id='loginbutton'(click)="openModal()">
+        <button mat-icon-button id='loginbutton' (click)="openModal()">
           <mat-icon aria-hidden="false" aria-label="Login icon">supervisor_account</mat-icon>
         </button>
-        <button mat-icon-button id='cartbutton' >
+        <button mat-icon-button id='cartbutton'>
           <mat-icon aria-hidden="false" aria-label="Shopping cart icon">shopping_cart</mat-icon>
-        </button>  
+        </button>
       </div>
     </mat-nav-list>
   </mat-sidenav>
@@ -29,13 +47,13 @@
         <img src="assets\myPharmacyLogo.svg" height="40px">
       </a>
       <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-    <app-searchbar *ngIf="!displayDevice" ></app-searchbar>
-    <button mat-icon-button id='loginbutton'(click)="openModal()" *ngIf="!displayDevice">
-      <mat-icon aria-hidden="false" aria-label="Login icon">supervisor_account</mat-icon>
-    </button>
-    <button mat-icon-button id='cartbutton' *ngIf="!displayDevice">
-      <mat-icon aria-hidden="false" aria-label="Shopping cart icon">shopping_cart</mat-icon>
-    </button>
+        <app-searchbar *ngIf="!displayDevice"></app-searchbar>
+        <button mat-icon-button id='loginbutton' (click)="openModal()" *ngIf="!displayDevice">
+          <mat-icon aria-hidden="false" aria-label="Login icon">supervisor_account</mat-icon>
+        </button>
+        <button mat-icon-button id='cartbutton' *ngIf="!displayDevice">
+          <mat-icon aria-hidden="false" aria-label="Shopping cart icon">shopping_cart</mat-icon>
+        </button>
       </div>
     </mat-toolbar>
     <ng-content>
