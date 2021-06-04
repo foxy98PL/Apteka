@@ -20,6 +20,5 @@ export class LoginModalComponent implements OnInit {
     console.log("test")
      this.loginService.getToken((document.getElementById("defaultForm-login")as HTMLInputElement).value 
     ,(document.getElementById("defaultForm-pass")as HTMLInputElement).value)
-    
   }
 }

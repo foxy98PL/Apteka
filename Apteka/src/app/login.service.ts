@@ -9,7 +9,6 @@ export class LoginService {
 
   constructor(private http:HttpClient,private cookieService:CookieService) { }
 
-
  
   getToken(login:String,password:String){
     const body = {
