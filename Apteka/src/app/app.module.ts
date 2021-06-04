@@ -53,15 +53,13 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { HttpClientModule } from "@angular/common/http";
-
 import { LoginModalComponent } from './login-modal/login-modal.component';
-
 import { SearchbarComponent } from './searchbar/searchbar.component';
-
 import { LayoutModule } from '@angular/cdk/layout';
 import { FooterComponent } from './footer/footer.component';
 import { FrontPageCarosuelComponent } from './front-page-carosuel/front-page-carosuel.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -74,6 +72,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     LoginModalComponent,
     FooterComponent,
     FrontPageCarosuelComponent,
+    HomeComponent,
 
 
   ],
