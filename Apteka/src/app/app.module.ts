@@ -60,6 +60,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FrontPageCarosuelComponent } from './front-page-carosuel/front-page-carosuel.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { HomeComponent } from './components/home/home.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -129,7 +130,12 @@ import { HomeComponent } from './components/home/home.component';
     FlexLayoutModule,
     LayoutModule,
     HttpClientModule,
-    MatCarouselModule.forRoot()
+    MatCarouselModule.forRoot(),
+    BrowserModule,
+    RouterModule.forRoot([
+      {path: 'home', component: HomeComponent},
+      {path: '', redirectTo: '/home', pathMatch: 'full'}
+    ]),
     
 
   ],
