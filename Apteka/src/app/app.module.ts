@@ -61,6 +61,7 @@ import { FrontPageCarosuelComponent } from './front-page-carosuel/front-page-car
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { HomeComponent } from './components/home/home.component';
 import { RouterModule } from '@angular/router';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 
 
@@ -134,6 +135,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
+      {path: 'aboutUs', component: AboutUsComponent},
       {path: '', redirectTo: '/home', pathMatch: 'full'}
     ]),
     
