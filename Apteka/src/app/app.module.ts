@@ -62,6 +62,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { HomeComponent } from './components/home/home.component';
 import { RouterModule } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { AboutUsCarosuelComponent } from './about-us-carosuel/about-us-carosuel.component';
 
 
 
@@ -76,6 +77,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     FooterComponent,
     FrontPageCarosuelComponent,
     HomeComponent,
+    AboutUsComponent,
+    AboutUsCarosuelComponent,
 
 
   ],
