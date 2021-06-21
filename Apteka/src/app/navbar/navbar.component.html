@@ -32,7 +32,7 @@
         <button mat-icon-button id='loginbutton' (click)="openModal()">
           <mat-icon aria-hidden="false" aria-label="Login icon">supervisor_account</mat-icon>
         </button>
-        <button mat-icon-button id='cartbutton'>
+        <button mat-icon-button id='cartbutton' (click)="openCheckout()">
           <mat-icon aria-hidden="false" aria-label="Shopping cart icon">shopping_cart</mat-icon>
         </button>
       </div>
@@ -51,7 +51,7 @@
         <button mat-icon-button id='loginbutton' (click)="openModal()" *ngIf="!displayDevice">
           <mat-icon aria-hidden="false" aria-label="Login icon">supervisor_account</mat-icon>
         </button>
-        <button mat-icon-button id='cartbutton' *ngIf="!displayDevice">
+        <button mat-icon-button id='cartbutton' (click)="openCheckout()" *ngIf="!displayDevice">
           <mat-icon aria-hidden="false" aria-label="Shopping cart icon">shopping_cart</mat-icon>
         </button>
       </div>

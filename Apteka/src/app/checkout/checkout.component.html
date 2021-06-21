@@ -1,0 +1,21 @@
+<div class="modal-header">
+Checkout
+  <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+    <span aria-hidden="true">×</span>
+  </button>
+  <h4 class="modal-title w-100" id="myModalLabel"></h4>
+</div>
+<div class="modal-body">
+    <div class = 'container' display = flex>
+    <div class = 'image'><img src = '/assets/imagesMedicine/melatonina.jpg' height = 100px></div>
+    <div class = 'content' display=flex>
+      <div class = 'itemName'><p style="font-size:20px">Melatonina</p></div>
+      <div class = 'itemPrice'><p style="font-size:20px">Cena: 30zł</p></div>
+      <div class = 'itemQuantity'><p style="font-size:20px">Sztuk: 3</p></div>
+    </div>
+    <hr>
+  </div>
+</div>
+<div class="modal-footer d-flex justify-content-center">
+  <button mdbBtn color="default" class="waves-light" mdbWavesEffect>Checkout</button>
+</div>

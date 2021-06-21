@@ -63,6 +63,8 @@ import { HomeComponent } from './components/home/home.component';
 import { RouterModule } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { AboutUsCarosuelComponent } from './about-us-carosuel/about-us-carosuel.component';
+import { MedicinesComponent } from './medicines/medicines.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
@@ -79,6 +81,8 @@ import { AboutUsCarosuelComponent } from './about-us-carosuel/about-us-carosuel.
     HomeComponent,
     AboutUsComponent,
     AboutUsCarosuelComponent,
+    MedicinesComponent,
+    CheckoutComponent,
 
 
   ],
@@ -139,7 +143,8 @@ import { AboutUsCarosuelComponent } from './about-us-carosuel/about-us-carosuel.
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
       {path: 'aboutUs', component: AboutUsComponent},
-      {path: '', redirectTo: '/home', pathMatch: 'full'}
+      {path: '', redirectTo: '/home', pathMatch: 'full'},
+      {path: 'medicines',component: MedicinesComponent}
     ]),
     
 

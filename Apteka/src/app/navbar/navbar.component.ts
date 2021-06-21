@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
 import { DeviceDetectorService ,DeviceInfo } from 'ngx-device-detector';
+import { CheckoutComponent } from '../checkout/checkout.component';
 import { LoginModalComponent } from '../login-modal/login-modal.component';
 
 
@@ -23,6 +24,9 @@ export class NavbarComponent implements OnInit {
   constructor(private modalService: MDBModalService,private deviceDetector:DeviceDetectorService) {}
   openModal() {
     this.modalRef = this.modalService.show(LoginModalComponent)
+  }
+  openCheckout(){
+    this.modalRef = this.modalService.show(CheckoutComponent)
   }
   showFiller = false;
   ngOnInit(): void {
